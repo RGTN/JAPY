@@ -1,0 +1,9 @@
+{
+  cost : 30,
+  image : "assets/Tower/JSON/Upgrades/HighVelocityAmmo.png",
+  bulletProperties : {
+    damage : 1,
+    pierce : 0,
+    source : "assets/RedBullet.png"
+  },
+}

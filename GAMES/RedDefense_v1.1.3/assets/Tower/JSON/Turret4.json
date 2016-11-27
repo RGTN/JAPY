@@ -1,0 +1,24 @@
+{
+  ID : 4,
+  firePeriod : 750,
+  range : 150,
+  bullets : 20,
+  bulletProperties : {
+    damage : 1,
+    pierce : 0
+  },
+  turretAssets : {
+    bottomSource : "assets/Tower/Bottom.png",
+    topSource : "assets/Tower/FlakTop.png"
+  },
+  inaccuracy : 0.35,
+  cost : 80,
+  upgrades : [
+    [
+      "HighVelocityAmmo",
+    ],
+    [
+      "Range",
+    ]
+  ]
+}

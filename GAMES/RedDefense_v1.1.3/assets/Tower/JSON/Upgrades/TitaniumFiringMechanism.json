@@ -1,0 +1,5 @@
+{
+  firePeriod : -10,
+  cost : 10,
+  image : "assets/Tower/JSON/Upgrades/TitaniumFiringMechanismIcon.png"
+}

@@ -1,0 +1,116 @@
+#version 150
+
+#define SAMPLES 16
+
+uniform sampler2D normalBuffer;
+uniform sampler2D depthBuffer;
+uniform sampler2D noiseBuffer;
+
+uniform mat4 inverseProj;
+
+uniform float inverseAspectRatio;
+uniform vec2 minMaxSsaoWidth;
+
+uniform float strength;
+uniform float scale;
+
+uniform vec2 uNoiseScale;
+uniform vec2 uScreenDimension;
+uniform vec2 frustumCorner;
+
+in vec2 texCoords;
+
+out float fragColor;
+
+
+vec2 offsets[16] = vec2[16](
+	vec2(0.044821292, 0.110167414),
+	vec2(0.1380541, 0.4925164),
+	vec2(0.1711376, 0.60476863),
+	vec2(0.0026801229, 0.8000565),
+	vec2(0.4459834, 0.14888838),
+	vec2(0.29496264, 0.38575724),
+	vec2(0.4706212, 0.6823994),
+	vec2(0.33042485, 0.8249533),
+	vec2(0.57578623, 0.1047747),
+	vec2(0.67860055, 0.25636286),
+	vec2(0.6422993, 0.5212651),
+	vec2(0.69669557, 0.9629153),
+	vec2(0.9217044, 0.1944445),
+	vec2(0.8729959, 0.4054296),
+	vec2(0.76195055, 0.6761958),
+	vec2(0.97839516, 0.90347415)
+);
+
+vec3 unproject( vec2 tc, float depth ) {
+	return vec3( (tc * 2.0 - 1.0) * frustumCorner, -1) * depth;
+}
+
+vec3 unpackNormal(vec2 packedNormal){
+    vec4 nn = vec4(packedNormal * 2.0, 0, 0) + vec4(-1,-1,1,-1);
+    float l = dot(nn.xyz,-nn.xyw);
+    nn.z = l;
+    nn.xy *= sqrt(l);
+    return nn.xyz * 2 + vec3(0,0,-1);
+}
+
+float rand(vec2 co){
+    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);
+}
+
+float rand3D(vec3 co){
+    return fract(sin(dot(co.xyz, vec3(12.9898, 78.233, 25.192))) * 43758.5453);
+}
+
+void main(){
+
+	float depthValue = texture(depthBuffer, texCoords).r/4096.0;
+	
+	float ssao = 1.0;
+	
+	//vec4 center = inverseProj * vec4(texCoords * 2.0 - 1.0, depthValue * 2 - 1, 1.0);
+	//center.xyz /= center.w;
+	
+	vec3 center = unproject( texCoords, depthValue );
+	
+	vec3 normal = unpackNormal(texture(normalBuffer, texCoords).xy);
+	//vec3 normal = texture(normalBuffer, texCoords).rgb;
+	
+	//float distance = sqrt(dot(center.xyz, center.xyz));
+	float distance = -center.z;
+	
+	float offsetScale = scale / distance;
+	float clampedOffsetScale = clamp(offsetScale, minMaxSsaoWidth.x, minMaxSsaoWidth.y);
+	float powerScale = min(clampedOffsetScale / offsetScale, 1);	
+	powerScale *= powerScale;
+	
+	//float angle = rand3D(center.xyz) * 360;
+	float angle = rand(texCoords) * 360;
+	vec2 rot = vec2(cos(angle), sin(angle));
+	//vec2 rot = vec2(1, 0);
+	
+	vec2 noiseScale = uScreenDimension/4.0;
+	vec2 randVector = normalize( texture( noiseBuffer, texCoords * noiseScale).xy * 2.0 - 1.0);
+	
+	for(int i = 0; i < SAMPLES; i++) {
+		vec2 offset = reflect(offsets[i] * 2.0 - 1.0, randVector) * clampedOffsetScale;
+		offset.x *= inverseAspectRatio;
+		vec2 sampleCoords = texCoords + offset;
+		//vec4 sample = inverseProj * vec4(sampleCoords * 2.0 - 1.0, texture(depthBuffer, sampleCoords).r * 2.0 - 1.0, 1.0);
+		//sample.xyz /= sample.w;
+		
+		vec3 sample = unproject( sampleCoords, texture(depthBuffer, sampleCoords).r );
+		
+		vec3 dPos = sample.xyz - center.xyz;
+		vec3 direction = normalize(dPos);
+		
+		//float falloff = max(0, (1 - (1.0/(1.0*powerScale)) * sqrt(dot(dPos, dPos))));
+		float falloff = 1 + dot(dPos, dPos) * 20 / scale;
+		ssao *= 1 - clamp((dot(direction, normal) * strength) * powerScale / falloff, 0, 1);
+	}
+	
+	fragColor = depthValue;
+	//gl_FragColor = vec4(1.0, 0.0, 0.0, 0.0);
+	//gl_FragColor = vec4(angle/360, 0.0, 0.0, 0.0);
+	//gl_FragColor = vec4(depthValue, 0.0, 0.0, 0.0);
+}

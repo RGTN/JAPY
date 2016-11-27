@@ -1,0 +1,71 @@
+#ID;English;Français
+TX_MATH;Mathematics;Mathématiques
+TX_PHYS;Physics;Physique
+TX_COMPUTER;Computer Science;Informatique
+TX_METAL;Metallurgy;Métallurgie
+TX_CHEM;Chemistry;Chimie
+TX_MED;Medicine;Médecine
+TX_MATH1;Econometrics;Économétrie
+TX_MATH2;Planification;Planification
+TX_MATH3;Calculator;Calculateur
+TX_PHYS1;Alternator;Alternateur
+TX_PHYS2;Aerospace;Aérospatiale
+TX_PHYS3;Thermonuclear Fusion;Fusion Thermonucléaire
+TX_COMPUTER1;Computerized Weapons;Armes Informatisées
+TX_COMPUTER2;A.I Division;Division I.A
+TX_COMPUTER3;Space Drone;Drone Spatial
+TX_METAL1;Ore Extraction;Extraction du Minerai
+TX_METAL2;Casting ;Fonderie
+TX_METAL3;Recycling;Recyclage
+TX_CHEM1;Purification;Épuration
+TX_CHEM2;Agriculture;Agriculture
+TX_CHEM3;Refining;Raffinage
+TX_MED1;Fertilization;Fécondation
+TX_MED2;Surgery;Chirurgie
+TX_MED3;Biological Weapon ;Arme Biologique
+TX_TECHREACHED;Reached Technologies;Technologies Recherchées
+TX_SCIENTIST;Scientists;Scientifiques
+TX_INCOME;Income;Revenue
+TX_SCIENCE;Science;Science
+TX_ELEC;Electricity;Électricité
+TX_H2O_O2;Water and Dioxygen;Eau et Dioxygène
+TX_FOOD;Food;Nourriture
+TX_RAW;Raw Materials;Matières Premières
+TX_METAL_PROD;Metals;Métaux
+TX_METAL_CONSUMPTION;Metals Consumption;Consommation de Métaux
+TX_MANUFACTURED;Consumer Goods;Biens de Consommation
+TX_HYDROCARBON;Hydrocarbon;Hydrocarbures
+TX_SHIP;Ship Power;Puissance des Vaisseaux
+TX_NUKE;Nuclear Power;Puissance Nucléaire
+TX_UNIT_POWER;Organic Division Power;Puissance des Divisions Organiques
+TX_AI_DIV;AI Division Power;Puissances des Divisions IA
+TX_SPACE_DRONE;Space Drone Power;Puissance des Drones Spatiaux
+TX_REINFORCEMENT;Organic Units Reinforcement;Renforcement des Unités Organiques
+TX_BIOWEAPON;Biological Weapon Power;Puissance des Armes Biologiques
+TX_UNIT;Unit Formation;Formation d'Unité
+TX_MILITIA;Militia;Milice
+TX_INFANTRY;Infantry;Infanterie
+TX_GARRISON;Garrison;Garnison
+TX_DAS;Defense Against Spaceship;Défense Anti Vaisseaux Spatiaux
+TX_MECHANIZED_INFANTRY;Mechanized Infantry;Infanterie Mécanisée
+TX_MECHANIZED_GARRISON;Mechanized Garrison;Garnison Mécanisée
+TX_MOTORIZED_INFANTRY;Motorized Infantry;Infanterie Motorisée
+TX_PP;Production Point;Point de Production
+TX_DIVISION;Divisions;Divisions
+TX_SPACESHIP;Spaceships;Vaisseaux Spatiaux
+TX_NUKE;Nuclear Power;Puissance Nucléaire
+TX_MOTHERSHIP;Mother Ship;Vaisseau Mère
+TX_BATTLECRUISER;Battle Cruiser;Cuirassé
+TX_DESTROYER;Destroyer;Destroyer
+TX_GROUND_BOMBER;Ground Bomber;Bombardier au Sol
+TX_BIOUNIT;Biological Division;Division Biologique
+TX_ORGANIC_UNIT;Organic;Organique
+TX_AI_UNIT;AI;IA
+TX_NUKE_UNIT;Nuclear;Nucléaire
+TX_CREATE;Create;Créer
+TX_GROWTH;Growth Efficiency;Efficacité de la Croissance
+TX_PA;Anti-Personal Attack;Attaque Anti-Personnelle
+TX_PD;Anti-Personal Defense;Défense Anti-Personnelle
+TX_SSA;Aerospace Attack;Attaque Aérospatiale 
+TX_SSD;Aerospace Defense;Défense Aérospatiale 
+TX_WARECO;War Economy :;Economie de Guerre :

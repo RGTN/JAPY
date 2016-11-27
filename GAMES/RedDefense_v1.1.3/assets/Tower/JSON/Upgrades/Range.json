@@ -1,0 +1,5 @@
+{
+  cost : 15,
+  image : "assets/Tower/JSON/Upgrades/Range.png",
+  range : 50
+}

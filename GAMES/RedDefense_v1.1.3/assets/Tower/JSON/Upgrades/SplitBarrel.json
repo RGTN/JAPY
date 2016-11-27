@@ -1,0 +1,9 @@
+{
+  bullets : 1,
+  cost : 20,
+  image : "assets/Tower/JSON/Upgrades/SplitBarrel.png",
+  turretAssets : {
+    bottomSource : "assets/Tower/Bottom.png",
+    topSource : "assets/Tower/DualTop.png"
+  },
+}

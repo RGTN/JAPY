@@ -1,0 +1,11 @@
+{
+  cost : 30,
+  image : "assets/Tower/JSON/Upgrades/Linger.png",
+  bulletProperties : {
+    pierce : 1,
+    damage : 0,
+    speed : -1,
+    source : null,
+    lifeTime : 3000,
+  },
+}

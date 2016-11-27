@@ -1,0 +1,6 @@
+{
+  bullets : 1,
+  cost : 20,
+  inaccuracy : 0.05,
+  image : "assets/Tower/JSON/Upgrades/TwoBalls.png"
+}

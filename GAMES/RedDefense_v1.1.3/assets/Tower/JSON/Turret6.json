@@ -1,0 +1,24 @@
+{
+  ID : 6,
+  shopCost : 20,
+  type : "Factory",
+  shopDescription : "Factory :\nA factory that\nperiodically produces money.",
+  firePeriod : 2000,
+  bullets : 1,
+  range : 0,
+  bulletProperties : {
+    damage : 0,
+    pierce : 0
+  },
+  turretAssets : {
+    bottomSource : "assets/Tower/SmallBottom.png",
+    topSource : "assets/Tower/Factory.png"
+  },
+  cost : 50,
+  upgrades : [
+    [
+    ],
+    [
+    ]
+  ]
+}

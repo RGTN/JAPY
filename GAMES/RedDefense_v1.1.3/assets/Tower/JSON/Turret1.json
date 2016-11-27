@@ -1,0 +1,27 @@
+{
+  ID : 1,
+  firePeriod : 140,
+  range : 70,
+  bullets : 1,
+  bulletProperties : {
+    damage : 1,
+    pierce : 0
+  },
+  turretAssets : {
+    bottomSource : "assets/Tower/Bottom.png",
+    topSource : "assets/Tower/Top.png"
+  },
+  inaccuracy : 0.13,
+  cost : 50,
+  upgrades : [
+    [
+      "Range",
+      "TitaniumFiringMechanism",
+      "HighVelocityAmmo"
+    ],
+    [
+      "SplitBarrel",
+      "DoubleSplitBarrel"
+    ]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  cost : 20,
+  dragonsBreath : 5,
+  turretAssets : {
+    bottomSource : "assets/Tower/Bottom.png",
+    topSource : "assets/Tower/FireCanonTop.png"
+  },
+  image : "assets/Tower/JSON/Upgrades/DragonsBreath.png"
+}

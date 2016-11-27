@@ -1,0 +1,116 @@
+#version 120
+
+//Light Structure
+struct Light
+{
+	vec3 position;
+	vec4 color;
+	float intensity;
+	float range;
+};
+
+//Spot Light Structure
+struct SpotLight
+{
+	vec3 position;
+	vec3 direction;
+	vec4 color;
+	float angle;
+};
+
+//Constant
+const int LIGHT_NUMBER = 4;
+
+//Uniform
+uniform sampler2D in_texture;
+uniform Light[LIGHT_NUMBER] in_light;
+uniform SpotLight[LIGHT_NUMBER] in_spot_light;
+uniform vec3 go_position;
+uniform vec4 material_color;
+
+//Mouse Over
+uniform int mouse_over;
+
+//Varying
+varying vec3 vertex_position;
+varying vec4 vertex_color;
+varying vec2 vertex_texture_coordinate;
+varying vec3 vertex_normal;
+
+void main()
+{
+	//Set Color Variable
+    vec4 alpha = texture2D(in_texture, vertex_texture_coordinate.st );
+	vec4 beta = alpha * vertex_color * material_color;
+	
+	//Lighting
+	vec4 totalLighting = vec4(0,0,0,1);
+	
+	//Light
+	for(int i = 0; i < LIGHT_NUMBER; i++)
+	{
+		vec3 light_pos = in_light[i].position;
+		
+		float u = sqrt( ((light_pos.x - (vertex_position.x + go_position.x) )*(light_pos.x - (vertex_position.x + go_position.x) )) + ((light_pos.y - (vertex_position.y + go_position.y) )*(light_pos.y - (vertex_position.y + go_position.y) )) + ((light_pos.z - (vertex_position.z + go_position.z) )*(light_pos.z - (vertex_position.z + go_position.z))) );
+		float v = in_light[i].intensity - (u / in_light[i].range);
+
+		if(v > 1)
+			v = 1;
+		if(v < 0)
+			v = 0;
+		
+		vec4 omega = in_light[i].color;
+		
+		//Light Attenuation
+		vec3 la = normalize(vec3( (vertex_position.x + go_position.x) - light_pos.x,(vertex_position.y + go_position.y) - light_pos.y , (vertex_position.z + go_position.z) - light_pos.z ));
+		vec3 lb = normalize(vertex_normal);
+		vec3 lc = vec3(lb.x + la.x,lb.y + la.y,lb.z + la.z);
+		
+		float attenuation = 2 - sqrt( (lc.x * lc.x) + (lc.y * lc.y) + (lc.z*lc.z) ); 
+		
+		totalLighting += omega * v * attenuation;
+	}
+	//Spot Light
+	for(int i = 0; i < LIGHT_NUMBER; i++)
+	{
+		vec3 u = vec3( (vertex_position + go_position) - in_spot_light[i].position);
+		vec3 a = normalize(in_spot_light[i].direction);
+		vec3 b = normalize(u);
+		float v = dot(a,b);
+		float w = in_spot_light[i].angle;
+		
+		//Light Attenuation
+		vec3 la = a;
+		vec3 lb = normalize(vertex_normal);
+		vec3 lc = vec3(lb.x - la.x,lb.y - la.y,lb.z - la.z);
+		
+		float attenuation = (2 - sqrt( (lc.x * lc.x) + (lc.y * lc.y) + (lc.z*lc.z) ) ) / 2;
+		
+		if(w < v)
+		{
+			vec4 omega = in_spot_light[i].color;
+			totalLighting += omega * pow(v,100) * attenuation;
+		}
+	}
+	//
+	
+	totalLighting.a = 1;
+	
+	vec4 lambda = totalLighting * beta;
+	
+	//If mouse is not over
+	vec4 mc;
+	if(mouse_over == 1)
+	{
+		mc = vec4(lambda.r,lambda.g,lambda.b,lambda.a);
+	}
+	else
+	{
+		mc = vec4(lambda.r - 0.2,lambda.g - 0.2,lambda.b - 0.2,lambda.a);
+	}
+	
+	//Set Final Color
+	gl_FragColor = mc;
+	
+	//End
+}

@@ -1,0 +1,13 @@
+# MM3D MTL file
+# Ns = specularity (float)
+# Ng = glossiness  (float)
+# Kd = diffuse     (vec3)
+# Ke = emissive    (vec3)
+# map_Km = material ( diffuse, normal, specular, gloss )
+
+newmtl m
+	Ns 4.0
+	Ng 300.0
+	Kd 1.0 1.0 1.0
+	Ke 0.0 0.0 0.0
+	map_Km ./swat_D.png ./swat_N.png ./swat_S.png NULL

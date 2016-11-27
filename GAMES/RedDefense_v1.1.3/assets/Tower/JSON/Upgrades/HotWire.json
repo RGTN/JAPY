@@ -1,0 +1,12 @@
+{
+  cost : 20,
+  image : "assets/Tower/JSON/Upgrades/HotWire.png",
+  type : "BarbedWire",
+  turretAssets : {
+    bottomSource : "assets/Tower/Bottom.png",
+    topSource : "assets/Tower/HotWire.png"
+  },
+  bulletProperties : {
+    damage : 13
+  },
+}

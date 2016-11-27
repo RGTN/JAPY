@@ -1,0 +1,26 @@
+#version 120
+
+//Uniform
+uniform sampler2D in_texture;
+uniform vec3 go_position;
+uniform vec4 material_color;
+
+//Varying
+varying vec3 vertex_position;
+varying vec4 vertex_color;
+varying vec2 vertex_texture_coordinate;
+varying vec3 vertex_normal;
+
+void main()
+{
+
+
+	//Set Color Variable
+    vec4 alpha = texture2D(in_texture, vertex_texture_coordinate.st);
+	vec4 beta = alpha * vertex_color * material_color;
+	
+	//Set Final Color
+	gl_FragColor = beta;
+	
+	//End
+}

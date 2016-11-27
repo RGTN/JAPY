@@ -1,0 +1,9 @@
+{
+  bullets : 1,
+  cost : 400,
+  image : "assets/Tower/JSON/Upgrades/SniperTopSplitIcon.png",
+  turretAssets : {
+    bottomSource : "assets/Tower/Bottom.png",
+    topSource : "assets/Tower/SniperTopSplit.png"
+  },
+}

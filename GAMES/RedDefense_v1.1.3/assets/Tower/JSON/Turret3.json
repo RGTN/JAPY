@@ -1,0 +1,26 @@
+{
+  ID : 3,
+  firePeriod : 1000,
+  range : 200,
+  bullets : 1,
+  bulletProperties : {
+    damage : 10,
+    pierce : 2,
+    speed : 7,
+    type : "Tracker"
+  },
+  turretAssets : {
+    bottomSource : "assets/Tower/Bottom.png",
+    topSource : "assets/Tower/SniperTop.png"
+  },
+  inaccuracy : 0.01,
+  cost : 80,
+  upgrades : [
+    [
+      "SplitSniperBarrel",
+    ],
+    [
+      "Range",
+    ]
+  ]
+}

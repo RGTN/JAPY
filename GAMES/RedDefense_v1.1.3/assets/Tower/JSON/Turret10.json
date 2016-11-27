@@ -1,0 +1,26 @@
+{
+  ID : 10,
+  shopCost : 20,
+  shopDescription : "Barbed Wire :\nPlace it down\nin your enemies path!",
+  type : "BarbedWire",
+  firePeriod : 1000,
+  bullets : 1,
+  range : 8,
+  bulletProperties : {
+    damage : 4,
+    pierce : 0
+  },
+  turretAssets : {
+    bottomSource : "assets/Tower/SmallBottom.png",
+    topSource : "assets/Tower/BarbedWire.png"
+  },
+  cost : 20,
+  upgrades : [
+    [
+      "HotWire",
+      "LaserWire"
+    ],
+    [
+    ]
+  ]
+}

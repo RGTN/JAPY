@@ -1,0 +1,20 @@
+# MM3D MTL file
+# Ns = specularity (float)
+# Ng = glossiness  (float)
+# Kd = diffuse     (vec3)
+# Ke = emissive    (vec3)
+# map_Km = material ( diffuse, normal, specular, gloss )
+
+newmtl m_arm
+	Ns 1.0
+	Ng 300.0
+	Kd 1.0 1.0 1.0
+	Ke 0.0 0.0 0.0
+	map_Km ./arms_city.jpg ./Arms_N.jpg ./Arms_S.jpg NULL
+	
+newmtl m_gun
+	Ns 1.5
+	Ng 800.0
+	Kd 1.0 1.0 1.0
+	Ke 0.0 0.0 0.0
+	map_Km ./UMP45_D.jpg ./UMP45_N.jpg ./UMP45_S.jpg ./UMP45_G.jpg

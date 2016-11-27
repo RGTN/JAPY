@@ -1,0 +1,103 @@
+#ID;English;Français
+TX_CITYCENTER;City Center;Hôtel de Ville
+TX_HABITATION;Habitation;Habitation
+TX_POWERPLANT;Power Plant;Centrale Électrique
+TX_DIOXYGEN_GENERATOR;Dioxygen Generator;Générateur de Dioxygène
+TX_H2O_PS;Water Pumping Station;Station de Pompage d'Eau
+TX_EXPLOITATION;Exploitation;Exploitation
+TX_MINE;Mine;Mine
+TX_DERRICK;Derrick;Derrick
+TX_GREENHOUSE;Greenhouse;Serre
+TX_FACTORY;Factory;Usine
+TX_LABORATORY;Laboratory;Laboratoire
+TX_UNIVERSITY;University;Université
+TX_BARRACK;Barrack;Caserne
+TX_SPATIOPORT;Spatioport;Spatioport
+TX_NUC;Nuclear Fusion Reactor;Réacteur à Fusion Nucléaire
+TX_ROAD;Road;Route
+TX_PLATFORM;Platfrom;Plate-forme
+TX_WEALTH;Wealth;Richesse
+TX_INCOME;Income;Revenue
+TX_SCIENCE;Science;Science
+TX_MANPOWER;Manpower;Main d’Oeuvre
+TX_ENERGY;Energy;Énergie
+TX_DIOXYGEN;Dioxygen;Dioxygène
+TX_H2O;Water;Eau
+TX_FOOD;Food;Nourriture
+TX_GOODS;Consumer Goods;Biens de Consommation
+TX_RAWS;Raw Materials;Matières Premières
+TX_METALS;Metals;Métaux
+TX_HYDROCARBON;Hydrocarbons;Hydrocarbures
+TX_GEMSTONES;Gemstones;Pierres Précieuses
+TX_RANDOM;Random;Aléatoire
+TX_GENERATE;Generate;Générer
+TX_UNCLAIMED;Unclaimed;Non Revendiqué
+TX_GOTO;Go to Planet Surface;Aller à sa Surface
+TX_NOROAD;No Road;Pas de Route
+TX_NOTBUILDABLE;Not Buildable Zone;Zone Non Constructible
+TX_NOSELECTED;None Building Selected;Aucun Bâtiment Sélectionné
+TX_QUIT;Quit Planet;Quitter la Planète
+TX_BUILDING_SELECT;Building Selector;Sélecteur de Bâtiment
+TX_TRADE;Trade;Commerce
+TX_TECH;Technology;Technologie
+TX_DIPLOMACY;Diplomacy;Diplomatie
+TX_SELECT;Select a Planet;Sélectionnez une Planète
+TX_NEWTRADE;New Trade;Nouvelle Offre
+TX_PLANETA;Planet A;Planète A
+TX_PLANETB;Planet B;Planète B
+TX_SENDOFFER;Send Offer;Envoyer l'Offre
+TX_DEMAND;Demand;Demande
+TX_SUPPLY;Supply;Offre
+TX_ACCEPT;Accept;Accepter
+TX_DECLINE;Decline;Refuser
+TX_DURATION;Duration;Durée
+TX_DIPLOMATIC;Diplomatic Offer;Offre Diplomatique
+TX_SELECTED_ARMIES;Selected Armies;Armées Sélectionnées
+TX_TANK_LEVEL;Tank Level;Niveau du Réservoir
+TX_MERGE;Merge Armies;Fusionner les Armées
+TX_FILL_TANK;Fill Tank;Remplir le Réservoir 
+TX_MM_NORMAL;Normal Mode;Mode Normale
+TX_MM_POLITICAL;Political Mode;Mode Politique
+TX_MM_DIPLOMATIC;Diplomatic Mode;Mode Diplomatique
+TX_SINGLE;Singleplayer;Un Joueur
+TX_MULTI;Multiplayer;Multijoueur
+TX_CAMPAIGN_EDITOR;Campaign Editor;Éditeur de Campagne
+TX_BUILDING_EDITOR;Building Editor;Éditeur de Bâtiment
+TX_SETTINGS;Settings;Réglages
+TX_QUIT;Quit;Quitter
+TX_SCREEN_RES;Screen Resolution;Résolution de l'Écran
+TX_FULLSCREEN;Full Screen;Plein Écran
+TX_FOVY;Field of View;Champ de Vision
+TX_VSYNC;Vertical Synchronization;Synchronisation Verticale
+TX_LANGUAGE;Language;Langue
+TX_KEYBOARD;Keyboard;Clavier
+TX_APPLY;Apply;Appliquer
+TX_MARKET;Market;Marché
+TX_DEFICIT_MALUS;Malus if Deficit;Malus si Déficit
+TX_FLUCTUATION;Fluctuation;Fluctuation
+TX_BUY;Buy;Acheter
+TX_SELL;Sell;Vendre
+TX_PLANET_LIST;Planet List;Liste des Planètes
+TX_RENAME;Rename;Renommer
+TX_UNITS;Units;Unités
+TX_ATWAR;At War;En Guerre
+TX_NEUTRAL;Neutral;Neutre
+TX_WARDECLA;War Declaration;Déclaration de Guerre
+TX_DWOU;declared war on us !;nous a déclaré la guerre !
+TX_PEACEPROPOSAL;Peace Proposal;Offre de Paix
+TX_PPEACE;proposes us peace.;nous propose la paix.
+TX_CREATEGAME;Create Game;Création de la Partie
+TX_CONNECT;Connect;Connexion
+TX_CONTINUE;Continue;Continuer
+TX_LAUNCHGAME;Launch Game;Lancer la Partie
+TX_SERVER;Server :;Serveur :
+TX_PLAYERNUMBER;Player Number;Nombre de Joueur
+TX_CAMPAIGNS;Campaigns :;Campagnes :
+TX_SAVES;Saves :;Sauvegardes :
+TX_SPECIES;Species : ;Espèces : 
+TX_SAVE;Save;Sauvegarder
+TX_PLANETHEALTH;Resource Quantity : ;Quantité de Ressource : 
+TX_TUTORIAL;Tutorial;Didacticiel
+TX_MASTERVOL;Master Volume;Volume Principal
+TX_MUSICVOL;Music Volume;Volume de la Musique
+TX_SEVOL;Sound Effect Volume;Volume des Bruitages

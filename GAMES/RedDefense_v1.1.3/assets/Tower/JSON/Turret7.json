@@ -1,0 +1,26 @@
+{
+  ID : 7,
+  shopCost : 10,
+  shopDescription : "Minigun :\nBasically a bullet hose.",
+  firePeriod : 50,
+  range : 120,
+  bullets : 1,
+  bulletProperties : {
+    damage : 1,
+    pierce : 0
+  },
+  turretAssets : {
+    bottomSource : "assets/Tower/SmallBottom.png",
+    topSource : "assets/Tower/MinigunTop.png"
+  },
+  inaccuracy : 0.27,
+  cost : 80,
+  upgrades : [
+    [
+      "HighVelocityAmmo",
+    ],
+    [
+      "Range"
+    ]
+  ]
+}

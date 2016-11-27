@@ -1,0 +1,32 @@
+{
+  ID : 5,
+  shopCost : 20,
+  shopDescription : "Flame Thrower :\nBurn your enemies\nwith napalm!",
+  firePeriod : 10,
+  range : 70,
+  bullets : 1,
+  shotNoise : "assets/Sounds/flamethrower.wav",
+  bulletProperties : {
+    source : "assets/FlameAmmo.png",
+    type : "Fire",
+    damage : 0.5,
+    pierce : 0,
+    damping : 0.95,
+    speed : 4,
+    lifeTime : 1000
+  },
+  turretAssets : {
+    bottomSource : "assets/Tower/Bottom.png",
+    topSource : "assets/Tower/FlameTop.png"
+  },
+  inaccuracy : 0.3,
+  cost : 150,
+  upgrades : [
+    [
+      "Linger",
+    ],
+    [
+      "Range",
+    ]
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  ID : 2,
+  firePeriod : 300,
+  range : 70,
+  bullets : 5,
+  bulletProperties : {
+    damage : 1,
+    pierce : 0
+  },
+  turretAssets : {
+    bottomSource : "assets/Tower/Bottom.png",
+    topSource : "assets/Tower/ShottyTop.png"
+  },
+  inaccuracy : 0.3,
+  cost : 65,
+  upgrades : [
+    [
+      "HighVelocityAmmo",
+    ],
+    [
+      "Range",
+    ]
+  ]
+}
