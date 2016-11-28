@@ -17,7 +17,7 @@ public class CMD extends ADAPTER{
 		if(cmd==""){}
 		else if(cmd.contains("run")){
 			finishedcommand=cmd.replace("run ", "");
-			returnstuff=ADAPTER.runCommand(finishedcommand);
+			returnstuff=runCommand(finishedcommand);
 			return returnstuff;
 		}
 		else if(cmd==""){}
